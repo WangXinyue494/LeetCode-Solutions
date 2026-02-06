@@ -23,7 +23,7 @@ class Solution:
                 count[char]=count[char]-1
         
         #检查是否为0
-        for val in count.values():
+        for val in count.values():  #attention its plural  values
             if val!=0:
                 return False
         
