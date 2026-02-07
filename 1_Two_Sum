@@ -1,18 +1,8 @@
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        note={}
-        #notice the range wrting norm
+        seen={}
         for i in range(len(nums)):
-            now_num=nums[i]
-            needed=target-now_num
-            if needed in note: 
-                #找到了
-                return i,note[needed]
+            if target-nums[i] in seen:  #search key in the dictionary is how the solution works well
+                return seen[target-nums[i]],i
             else:
-                #要找的不在等待区
-                note[nums[i]]=i
-
-
-
-
-
+                seen[nums[i]]=i
